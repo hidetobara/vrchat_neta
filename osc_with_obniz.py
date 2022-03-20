@@ -29,7 +29,7 @@ async def onconnect(obniz):
         v = obniz.ad5.value
         rate = max((v - lower)/(upper - lower), 0)
         print("VOL=", rate)
-        client.send_message("/finger/index", rate)
+        client.send_message("/fingers/index", rate)
         await obniz.wait(1000)
 
 if __name__ == "__main__":
